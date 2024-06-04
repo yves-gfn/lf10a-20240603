@@ -1,0 +1,82 @@
+<!-- Hier steht der Code -->
+<!-- Ich bin ein Kommentar! -->
+
+<!DOCTYPE html>
+<html lang="de">    
+    <head>
+        <title>HTML-Element-Referenz</title>
+    </head>
+    <body>
+        <h1>HTML-Element-Referenz</h1>
+        <h2>HTML-Tags</h2>
+        <p>&lt;html&gt; : Definiert den Bereich, in dem das gesamte HTML - Markup kommt</p>
+        <p>&lt;head&gt; : Enthält Metadaten, Informationen des Dokuments</p>
+        <p>&lt;title&gt; : Definiert den Titel des Dokuments (das was man oben im Tab lesen kann)</p>
+        <p>&lt;body&gt; : Definiert den Dokumentenkörper, enthält alle anderen Elemente</p>
+        <p>&lt;br&gt; : Erzeugt einen Zeilenumbruch, nur verwenden, wenn man einen Umbruch erzwingen will,
+            ansonsten den Browser den Umbruch automatisch nach Breite des Ausgabemediums entscheiden lassen.
+            Benötigt kein end-Tag (standalone-tag)
+        </p>
+        <p>&lt;hr&gt; : Horizontal Row, Browser zeichnet eine horizontale Linie, um Themen zu trennen</p>
+        <p>&lt;wbr&gt; : (word break opportunity) Tag kann innerhal eines Wortes definiert und erzeugt eine Sollbruchstelle, an dieser Sollbruchstelle
+            soll der Browser das Wort umbrechen, erzeugt aber <strong>KEIN</strong> Bindestrich
+        </p>
+        
+        <br>
+        <h2>Block-Elemente</h2>
+        <p>Block-Elemente erzeugten um sich herum, bzw. meistens nach oben und oder nach unten einen Abstand</p>
+        <hr>
+        <p>&lt;h1&gt; bis &lt;h6&gt; : Seitenüberschriften, nur ein &lt;h1&gt; - Tag pro Dokument. Unbegrenzt viele H2-H6 Tags.</p>
+        <p>&lt;p&gt; : Erstellt einen Absatz (paragraph) mit Außenabständen (margin)</p>
+        <p>&lt;article&gt; : In sich geschlossener Abschnitt (z.B. Blogbeitrag). Erzeugt keine Außenabstände. Rein semantische Bedeutung.</p>
+        <p>&lt;aside&gt; : Inhalt, der zum Rest passt, aber nicht direkt dazu gehört, quasi eine Randbemerkung. 
+            Wird auch gerne für Seitenleisten verwendet. Rein semantische Bedeutung.
+        </p>
+        <p>&lt;blockquote&gt; : Zitat mit Absatz, erzeugt im Gegenteil zu &lt;q&gt; einen Absatz, starke semantische Bedeutung</p>
+        <p>&lt;div&gt; : (divison, Definitionsbereich) - Vielseitig einsetzbar zur Kennzeichnung eines Abschnitts oder Bereichs.
+            Sollte aber nur genutzt werden, wenn kein anderes semantisches Tag (z.B. artcle, aside usw.) passender ist. 
+        </p>
+        <p>&lt;header&gt; : Einleitung / Kopfbereich eines Textes oder Seite, <strong>nicht zu verwechseln</strong> mit
+            dem &lt;head&gt; - Bereich des Dokuments. 
+        </p>
+        <p>&lt;main&gt; : Kennzeichnet den Hauptinhaltsbereich</p>
+        <p>&lt;footer&gt; : Fußzeile eines Abschnitts oder einer Seite</p> 
+        <p>&lt;nav&gt; : Kenzeichnet die darin enthaltenen Elemente als Navigationselemente</p>
+        <p>&lt;section&gt; Sektion eines Textes, z.B. zur weiteren Unterteilung von main oder article</p>
+        
+        <br>
+        <h2>Inline-Elemente</h2>
+        <p>Inline - Elemente erzeugen <strong>keinen</strong> Außenabstand und stehen in der Regel in anderen Elementen, wie dem
+        p - Tag.</p>
+        <hr>
+        <p>&lt;strong&gt; : Text wird fett geschrieben, starke Betonung, Hervorhebung der Texstelle als wichtig</p>
+        <p>&lt;b&gt; : Teg um Text fett zu schreiben, aber sollte nur verwendet werden, wenn man Textstelle keine höhere Bedeutung
+            geben möchte. &lt;b&gt; ist laut W3C dann sinnvoll, wenn der Textbereich von umgebenen Text hervorgehoben werden soll,
+            ohne sie wichtiger erscheinen zu lassen. 
+        </p>
+        <p>&lt;em&gt; : (emphasize, hervorheben) Text wird <em>kursiv</em> geschrieben</p>
+        <p>&lt;i&gt; : (italic, kursiv) Text wird <i>kursiv</i>, hat aber keine wichtigere Bedeutung. Ähnlich strong und b</p>
+        <p>&lt;q&gt; : (quote, Zitat): Kurzes Zitat im Fließtext, im Gegensatz zu &lt;blockquote&gt; erzeugt es keinen Absatz</p>
+        <p>&lt;s&gt; : (striktrough, durchgestrichen) Kennzeichnet Textbereich als falsch, bzw. nicht mehr korrekt. Der Text 
+            wird i.d.R. <s>durchgestrichen</s> angezeigt. 
+        </p>
+        <p>&lt;adress&gt; : Kennzeichnet Textbereich als Kontaktinformation, i.d.R. Autor des Dokumentes oder Textes</p>
+        <p>&lt;span&gt; : Vielseitig einsetztbar um Text zu markieren, ähnlicher Nutzen wie &lt;div&gt;, hat keinen Effekt, außer,
+            dass man den Inhalt leicht durch CSS / Javascript anpassen kann
+        </p>
+
+
+        <br>
+        <h2>Maskierung geschützter Zeichen</h2>
+        <p>&lt; : &amp;lt; (less then, kleiner als Symbol)</p>
+        <p>&gt; : &amp;gt; (greater then, größer als Symbol)</p>
+        <p>&amp; : &amp;amp; - Kaufmanns - Und (ampersand)</p>
+        <p>&quot; : &amp;quot; Erzeugt Gänsefüßchen </p>
+        <p>&amp;shy; : (soft hyphen, weicher Trennstrich) Kein Tag. Sollbruchstelle zum Trennen langer Wörter, erzeugt aber einen
+            Bindestrich, wie man das im Deutschen erwarten würde z.B. Pappkart&shy;ton
+        </p>
+        <p>&amp;nbsp;(not breaking space) : Leerzeichen, bei dem kein Zeileumbruch passieren darf. Der Browser wird das Wort 
+            in die nächste Zeile schreiben, wenn kein Platz mehr da ist 
+        </p> 
+    </body>
+</html>
