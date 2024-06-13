@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="de">    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tabellen</title>
+        <style>
+            table, th, td {
+                border: 1px solid black;
+                border-collapse: collapse;
+            }
+
+            th, td {
+                padding: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <h1>Tabellendemonstration</h1>
+            <table>
+                <caption>Kursübersicht</caption> <!-- Tabellenüberschrift -->
+                <thead> <!-- Spaltenüberschriften -->
+                    <tr> <!-- Neue Zeile der Tabelle -->
+                        <th>Kurs</th> <!-- Einzelne Spaltenüberschrift-->
+                        <th>Teilnehmer</th>
+                        <th>Trainer</th>
+                        <th>Raum</th>
+                        <th>Start</th>
+                    </tr>
+                </thead>
+                <tbody> <!-- im tbody stehen alle Datenelemente-->
+                    <tr>
+                        <td>LF10a</td> <!-- Einzelnes Datenelement-->
+                        <td>20</td>
+                        <td>Tesch</td>
+                        <td>Homeoffice / Standort</td>
+                        <td>03.06.2024</td>
+                    </tr>
+                    <tr>
+                        <td>LF08</td>
+                        <td>23</td>
+                        <td>Schübler</td>
+                        <td>1 Hannover</td>
+                        <td>24.06.2024</td>
+                    </tr>
+                </tbody>
+            </table>
+        </main>
+    </body>
+</html>
+

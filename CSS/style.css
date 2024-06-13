@@ -1,0 +1,213 @@
+* {
+    box-sizing: border-box;
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    background-color: #f8f8f8;
+    padding: 5px;
+    transition: background-color 0.8s
+    ease-out;
+}
+
+td:hover, th:hover {
+    background-color: rgba(194,223,233, 0.65);
+    transition: background-color 0.5s ease-out;
+}
+
+
+body {
+    background-color: bisque;
+}
+
+p {
+    letter-spacing: 1px;
+    line-height: 20px;
+}
+
+/*nicht besuchter Link*/
+a:link {
+    color: #ff1f1f;
+    text-decoration: none;
+}
+
+/*besuchter Link*/
+a:visited {
+    color: #c90000;
+    text-decoration: none;
+}
+
+/*Maus hovert über Element*/
+a:hover {
+    text-decoration: underline;
+    color: #5e00c9;
+}
+
+/*Element mit Linksklick gedrückt*/
+a:active {
+    color: #c16464;
+    text-decoration: none;
+}
+
+/*Element mit Tab ausgewählt*/
+a:focus {
+    color: #21ed06;
+    text-decoration: underline;
+}
+
+h1::first-letter {
+    color:#c90000;
+    font-size: 1.75em;
+}
+
+/* p::first-line {
+    color: #21ed06;
+    line-height: 40px;
+} */
+
+h3 {
+    margin-top: 3em;
+    font-family: '1942';
+}
+
+h3::before {
+    color:#c90000;
+    content: "\231F";
+    margin-right: 10px;
+}
+
+h3::after {
+    color:#c90000;
+    content: "\231E";
+    margin-left: 10px;
+}
+
+.verlauf {
+    width: 200px;
+    height: 200px;
+    margin: 1.5em 0 2.5em 0;
+}
+
+#farbverlauf1 {
+    background-image: linear-gradient(180deg, red,blue);
+}
+
+#farbverlauf2 {
+    background-image: linear-gradient(0deg, red,blue);
+}
+
+#farbverlauf3 {
+    background-image: linear-gradient(45deg, red, blue);
+}
+
+#farbverlauf4 {
+    background-image: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
+}
+
+#farbverlauf5 {
+    background-image: linear-gradient(90deg, red, blue 15%);
+}
+
+#farbverlauf6 {
+    height: 100px;
+    background-image: radial-gradient(ellipse,red, blue);
+}
+
+#farbverlauf7 {
+    height: 100px;
+    background-image: radial-gradient(circle, red, blue);
+}
+
+#farbverlauf8 {
+    background-image: radial-gradient(200px 100px, red, blue);
+}
+
+#farbverlauf9 {
+    background-image: radial-gradient(circle at 1em 1em, red, blue);
+}
+
+#farbverlauf10 {
+    background-image: conic-gradient(red, yellow, cyan);
+}
+
+#entstoert {
+    width: 500px;
+    height: 500px;
+    background: linear-gradient(rgba(255,255,255, 0.6), rgba(255,255,255, 0.6)), url(Bilder/Hintergrundbilder/vincent-van-gogh.jpg);
+}
+
+#van-gogh {
+    width: 30%;
+}
+
+.float-left {
+    float: left;
+    margin-right: 1.5em;
+    margin-bottom: 1em;
+}
+
+.float-right {
+    float: right;
+    margin-left: 1.5em;
+    margin-bottom: 1em;
+}
+
+.clear {
+    clear: both;
+}
+
+.feste-groesse {
+    background-color: #fff;
+    width: 250px;
+    height: 250px;
+    overflow: scroll;
+}
+
+#white-elegant {
+    width: 20%;
+    min-width: 200px;
+    max-width: 400px;
+}
+
+#logo {
+    position: absolute;
+    top: 1em;
+    right: 2em;
+    width: 150px;
+}
+
+#image-container {
+    position: relative;
+    height: 350px
+
+}
+
+#logo2 {
+    position: absolute;
+    top: 1em;
+    left: 1em;
+    z-index: 2;
+}
+
+#globe {
+    position: absolute;
+    top: 10em;
+    left: 10em;
+    z-index: 1;
+}
+
+.bigger-image {
+    width: 30%;
+    margin: 1.5em 0;
+    transition: width 0.3s ease-in-out;
+}
+
+.bigger-image:hover {
+    width: 50%;
+    transition: width 0.3s ease-in-out;
+}
+
+
+
+

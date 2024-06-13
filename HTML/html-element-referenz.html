@@ -1,0 +1,308 @@
+<!-- Hier steht der Code -->
+<!-- Ich bin ein Kommentar! -->
+
+<!DOCTYPE html>
+<html lang="de">    
+    <head>
+        <title>HTML-Element-Referenz</title>
+        <style>
+            table, th, td {
+                border: 1px solid black;
+                border-collapse: collapse;
+            }
+
+            th, td {
+                padding: 5px;
+            }
+
+            caption {
+                font-size: 30px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>HTML-Element-Referenz</h1>
+        <table>
+            <caption><strong>HTML-Tags</strong></caption>
+            <thead>
+                <tr>
+                    <th>Element</th>
+                    <th>Beschreibung</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>&lt;html&gt;</td>
+                    <td>Definiert den Bereich, in dem das gesamte HTML - Markup kommt</td>
+                </tr>
+                <tr>
+                    <td>&lt;head&gt;</td>
+                    <td>Enthält Metadaten, Informationen des Dokuments</td>
+                </tr>
+                <tr>
+                    <td>&lt;title&gt;</td>
+                    <td>Definiert den Titel des Dokuments (das was man oben im Tab lesen kann)</td>
+                </tr>
+                <tr>
+                    <td>&lt;body&gt;</td>
+                    <td>Definiert den Dokumentenkörper, enthält alle anderen Elemente</td>
+                </tr>
+                <tr>
+                    <td>&lt;br&gt;</td>
+                    <td>Erzeugt einen Zeilenumbruch, nur verwenden, wenn man einen Umbruch erzwingen will,
+                        ansonsten den Browser den Umbruch automatisch nach Breite des Ausgabemediums entscheiden lassen.
+                        Benötigt kein end-Tag (standalone-tag)</td>
+                </tr>
+                <tr>
+                    <td>&lt;hr&gt;</td>
+                    <td>Horizontal Row, Browser zeichnet eine horizontale Linie, um Themen zu trennen</td>
+                </tr>
+                <tr>
+                    <td>&lt;wbr&gt;</td>
+                    <td> (word break opportunity) Tag kann innerhal eines Wortes definiert und erzeugt eine Sollbruchstelle, an dieser Sollbruchstelle
+                        soll der Browser das Wort umbrechen, erzeugt aber <strong>KEIN</strong> Bindestrich</td>
+                </tr>
+            </tbody>
+        </table>
+        <br><br><br>
+        <p>Block-Elemente erzeugten um sich herum, bzw. meistens nach oben und oder nach unten einen Abstand</p>
+
+        <table>
+            <thead>
+                <caption><strong>Block-Elemente</strong></caption>
+                <th>Elemente</th>
+                <th>Beschreibung</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>&lt;h1&gt; bis &lt;h6&gt;</td>
+                    <td>Seitenüberschriften, nur ein &lt;h1&gt; - Tag pro Dokument. Unbegrenzt viele H2-H6 Tags.</td>
+                </tr>
+                <tr>
+                    <td>&lt;p&gt;</td>
+                    <td>Erstellt einen Absatz (paragraph) mit Außenabständen (margin)</td>
+                </tr>
+                <tr>
+                    <td>&lt;article&gt;</td>
+                    <td>In sich geschlossener Abschnitt (z.B. Blogbeitrag). Erzeugt keine Außenabstände. Rein semantische Bedeutung.</td>
+                </tr>
+                <tr>
+                    <td>&lt;aside&gt;</td>
+                    <td>Inhalt, der zum Rest passt, aber nicht direkt dazu gehört, quasi eine Randbemerkung. 
+                        Wird auch gerne für Seitenleisten verwendet. Rein semantische Bedeutung.</td>
+                </tr>
+                <tr>
+                    <td>&lt;blockquote&gt;</td>
+                    <td>Zitat mit Absatz, erzeugt im Gegenteil zu &lt;q&gt; einen Absatz, starke semantische Bedeutung</td>
+                </tr>
+                <tr>
+                    <td>&lt;div&gt;</td>
+                    <td>(divison, Definitionsbereich) - Vielseitig einsetzbar zur Kennzeichnung eines Abschnitts oder Bereichs.
+                        Sollte aber nur genutzt werden, wenn kein anderes semantisches Tag (z.B. artcle, aside usw.) passender ist. </td>
+                </tr>
+                <tr>
+                    <td>&lt;header&gt;</td>
+                    <td> Einleitung / Kopfbereich eines Textes oder Seite, <strong>nicht zu verwechseln</strong> mit
+                        dem &lt;head&gt; - Bereich des Dokuments. </td>
+                </tr>
+                <tr>
+                    <td>&lt;main&gt;</td>
+                    <td>Kennzeichnet den Hauptinhaltsbereich</td>
+                </tr>
+                <tr>
+                    <td>&lt;footer&gt;</td>
+                    <td>Fußzeile eines Abschnitts oder einer Seite</td>
+                </tr>
+                <tr>
+                    <td>&lt;nav&gt;</td>
+                    <td>Kenzeichnet die darin enthaltenen Elemente als Navigationselemente</td>
+                </tr>
+                <tr>
+                    <td>&lt;section&gt;</td>
+                    <td>Sektion eines Textes, z.B. zur weiteren Unterteilung von main oder article</td>
+                </tr>
+            </tbody>
+        </table>
+        <br><br><br>
+        <p>Inline - Elemente erzeugen <strong>keinen</strong> Außenabstand und stehen in der Regel in anderen Elementen, wie dem
+        p - Tag.</p>
+        <table>
+            <thead>
+                <caption><strong>Inline-Elemente</strong></caption>
+                <th>Elemente</th>
+                <th>Beschreibung</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>&lt;strong&gt;</td>
+                    <td>Text wird fett geschrieben, starke Betonung, Hervorhebung der Texstelle als wichtig</td>
+                </tr>
+                <tr>
+                    <td>&lt;b&gt;</td>
+                    <td>Teg um Text fett zu schreiben, aber sollte nur verwendet werden, wenn man Textstelle keine höhere Bedeutung
+                        geben möchte. &lt;b&gt; ist laut W3C dann sinnvoll, wenn der Textbereich von umgebenen Text hervorgehoben werden soll,
+                        ohne sie wichtiger erscheinen zu lassen.</td>
+                </tr>
+                <tr>
+                    <td>&lt;em&gt;</td>
+                    <td>(emphasize, hervorheben) Text wird <em>kursiv</em> geschrieben</td>
+                </tr>
+                <tr>
+                    <td>&lt;i&gt;</td>
+                    <td>(italic, kursiv) Text wird <i>kursiv</i>, hat aber keine wichtigere Bedeutung. Ähnlich strong und b</td>
+                </tr>
+                <tr>
+                    <td>&lt;q&gt;</td>
+                    <td>(quote, Zitat): Kurzes Zitat im Fließtext, im Gegensatz zu &lt;blockquote&gt; erzeugt es keinen Absatz</td>
+                </tr>
+                <tr>
+                    <td>&lt;s&gt;</td>
+                    <td>(striktrough, durchgestrichen) Kennzeichnet Textbereich als falsch, bzw. nicht mehr korrekt. Der Text 
+                        wird i.d.R. <s>durchgestrichen</s> angezeigt. </td>
+                </tr>
+                <tr>
+                    <td>&lt;adress&gt;</td>
+                    <td>Kennzeichnet Textbereich als Kontaktinformation, i.d.R. Autor des Dokumentes oder Textes</td>
+                </tr>
+                <tr>
+                    <td>&lt;span&gt;</td>
+                    <td>Vielseitig einsetztbar um Text zu markieren, ähnlicher Nutzen wie &lt;div&gt;, hat keinen Effekt, außer,
+                        dass man den Inhalt leicht durch CSS / Javascript anpassen kann</td>
+                </tr>
+            </tbody>
+        </table>
+        <br><br><br>
+        <table>
+            <thead>
+                <caption><strong>Maskierung geschützter Zeichen</strong></caption>
+                <th>Elemente</th>
+                <th>Beschreibung</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>&lt;</td>
+                    <td>&amp;lt; (less then, kleiner als Symbol)</td>
+                </tr>
+                <tr>
+                    <td>&gt;</td>
+                    <td>&amp;gt; (greater then, größer als Symbol)</td>
+                </tr>
+                <tr>
+                    <td>&amp;</td>
+                    <td>&amp;amp; - Kaufmanns - Und (ampersand)</td>
+                </tr>
+                <tr>
+                    <td>&quot;</td>
+                    <td>&amp;quot; Erzeugt Gänsefüßchen</td>
+                </tr>
+                <tr>
+                    <td>&amp;shy;</td>
+                    <td>(soft hyphen, weicher Trennstrich) Kein Tag. Sollbruchstelle zum Trennen langer Wörter, erzeugt aber einen
+                        Bindestrich, wie man das im Deutschen erwarten würde z.B. Pappkart&shy;ton</td>
+                </tr>
+                <tr>
+                    <td>&amp;nbsp;</td>
+                    <td>(not breaking space) : Leerzeichen, bei dem kein Zeileumbruch passieren darf. Der Browser wird das Wort 
+                        in die nächste Zeile schreiben, wenn kein Platz mehr da ist</td>
+                </tr>
+            </tbody>
+        </table>
+        <br><br><br>
+        <table>
+            <thead>
+                <caption><strong>Listen</strong></caption>
+                <th>Elemente</th>
+                <th>Beschreibung</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>&lt;ul&gt;</td>
+                    <td>leitet eine ungeordnete Liste, also mit Punkten, ein</td>
+                </tr>
+                <tr>
+                    <td>&lt;ol&gt;</td>
+                    <td>leitet eine geordnete Liste ein</td>
+                </tr>
+                <tr>
+                    <td>&lt;li&gt;</td>
+                    <td>List Item, erzeugt Datenelement</td>
+                </tr>
+                <tr>
+                    <td>&lt;ol type="A"&gt;</td>
+                    <td>Geordnete Liste mit veränderten Aufzählungszeichen, große Buchstaben</td>
+                </tr>
+                <tr>
+                    <td>&lt;ol type="a"&gt;</td>
+                    <td>Geordnete Liste mit veränderten Aufzählungszeichen, kleine Buchstaben</td>
+                </tr>
+                <tr>
+                    <td>&lt;ol type="I"&gt;</td>
+                    <td>Geordnete Liste mit veränderten Aufzählungszeichen, große römische Ziffern</td>
+                </tr>
+                <tr>
+                    <td>&lt;ol type="i"&gt;</td>
+                    <td>Geordnete Liste mit veränderten Aufzählungszeichen, kleine römische Ziffern</td>
+                </tr>
+                <tr>
+                    <td>&lt;ol start="6"&gt;</td>
+                    <td>Geordnete Liste mit verändertem Start, beginnt bei 6</td>
+                </tr>
+                <tr>
+                    <td>&lt;ol type="I" start="6"&gt;</td>
+                    <td>Geordnete Liste mit verändertem Start, beginnt bei 6 und verändertem Typ</td>
+                </tr>
+                <tr>
+                    <td>&lt;dl&gt;</td>
+                    <td>definition list - Leitet Definitionssliste ein</td>
+                </tr>
+                <tr>
+                    <td>&lt;dt&gt;</td>
+                    <td>Erzeugt defintion term, Kategorie der Unterpunkte</td>
+                </tr>
+                <tr>
+                    <td>&lt;dd&gt;</td>
+                    <td>Erzeugt Datenelement der Definitionsliste</td>
+                </tr>
+            </tbody>
+        </table>
+        <br><br><br>
+        <table>
+            <thead>
+                <caption><strong>Tabellen</strong></caption>
+                <th>Elemente</th>
+                <th>Beschreibung</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>&lt;table&gt;</td>
+                    <td>leitet Tabelle ein</td>
+                </tr>
+                <tr>
+                    <td>&lt;caption&gt;</td>
+                    <td>Tabellenüberschrift</td>
+                </tr>
+                <tr>
+                    <td>&lt;thead&gt;</td>
+                    <td>Leitet Tabellenkopf ein</td>
+                </tr>
+                <tr>
+                    <td>&lt;th&gt;</td>
+                    <td>Einzelne Tabellenüberschrift</td>
+                </tr>
+                <tr>
+                    <td>&lt;tr&gt;</td>
+                    <td>Erzeugt Tabellenzeile</td>
+                </tr>
+                <tr>
+                    <td>&lt;tbody&gt;</td>
+                    <td>Leitet Tabellenkörper ein, in dem alle Tabellendaten stehen</td>
+                </tr>
+                <tr>
+                    <td>&lt;td&gt;</td>
+                    <td>Einzelnes Datenelement in der Tabelle</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>
+

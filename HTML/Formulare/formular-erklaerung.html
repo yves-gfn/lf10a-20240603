@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="de">    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Formulare</title>
+    </head>
+    <body>
+        <main>
+            <h1>Formulare verwenden</h1>
+            <form action="#">
+                <h2>Einzeiliges Textfeld</h2>
+                <input type="text">
+                <br><br>
+                
+                <h2>Einzeiliges Textfeld mit size-Attribut</h2>
+                <p>Mit dem Attribut size im input - Tag kann die Größe voreingestellt werden</p>
+                <input type="text" size="30">
+                <br><br>
+                <h2>Passwort Eingabe</h2>
+                <input type="password" size="10" maxlength="10"> 
+                <!-- minlength auch als Attribut verfügbar, um minimale Länge festzulegen-->
+                
+                <br><br>
+                <h2>Eingabefelder mit name und id</h2>
+                <p>Eingabefelder sollten eindeutig über das name und id - Attribut identifizierbar sein.
+                    Der User sieht name und id nicht, ist unsichtbar. 
+                </p>
+                <input type="text" name="Anschrift" id="Anschrift">
+
+                <br><br>
+                <h2>Beschriftung mit Label</h2>
+                <label for="Anschrift2">Ihre Anschrift:</label>
+                <input type="text" name="Anschrift2" id="Anschrift2">
+
+                <br><br>
+                <h2>Texteingabe vordefiniert in Eingabefeld</h2>
+                <input type="text" name="Anschrift3" id="Anschrift3" value="Ihre Anschrift">
+
+                <br><br>
+                <h2>Texteingabe mit Placeholder Attribut</h2>
+                <input type="text" name="Anschrift4" id="Anschrift4" placeholder="Ihre Anschrift">
+
+                <br><br>
+                <h2>Mehrzeilige Textfelder</h2>
+                <p>Die Attribute rows und cols definieren Zeilen und Spalten, bzw. X und Y-Längen</p>
+                <textarea name="textfeld" id="textfeld" rows="10" cols="25"></textarea>
+
+                <br><br>
+                <h2>Auswahllisten mit Einzelauswahl</h2>
+                <select name="lieblingsfarbe" id="lieblingsfarbe">
+                        <option>Rot</option>
+                        <option>Blau</option>
+                        <option>Gelb</option>
+                        <option>Grün</option>
+                        <option>Grau</option>
+                        <option>Andere</option>
+                </select>
+
+                <br><br>
+                <h2>Auswahlliste mit size</h2>
+                <select name="lieblingsfarbe1" id="lieblingsfarbe1" size="4">
+                    <option>Rot</option>
+                    <option>Blau</option>
+                    <option>Gelb</option>
+                    <option>Grün</option>
+                    <option>Grau</option>
+                    <option>Andere</option>
+                </select>
+
+                <br><br>
+                <h2>Mehrfachauswahl mit dem Attribut multiple</h2>
+                <select name="lieblingsfarbe2" id="lieblingsfarbe2" size="3" multiple>
+                    <option>Rot</option>
+                    <option>Blau</option>
+                    <option>Gelb</option>
+                    <option>Grün</option>
+                    <option>Grau</option>
+                    <option>Andere</option>
+                </select>
+
+                <br><br>
+                <h2>Auswahl mit vordefiniertem Wert</h2>
+                <select name="lieblingsfarbe3" id="lieblingsfarbe3" size="3">
+                    <option>Rot</option>
+                    <option selected>Blau</option>
+                    <option>Gelb</option>
+                </select>
+
+                <br><br>
+                <h2>Liste mit values</h2>
+                <p>Wählen Sie Ihr Reiseland aus:</p>
+                <select name="reiselaender" id="reiselaender">
+                    <option value="r1">USA</option>
+                    <option value="r2">Frankreich</option>
+                    <option value="r3">China</option>
+                    <option value="r4">Ägypten</option>
+                </select>
+
+                <br><br>
+                <h2>Datumspicker</h2>
+                <input type="date" name="datumspicker" id="datumspicker">
+
+                <br><br>
+                <h2>Checkboxen (anklickbare Boxen mit Mehrfachauswahl)</h2>
+                <p>
+                    Checkboxen brauchen dringend das value - Attribut, da sonst keine Informationen verschickt
+                    werden
+                </p>
+                <input type="checkbox" name="hobby1" id="hobby1" value="lesen">
+                <label for="hobby1">Lesen</label>
+                <input type="checkbox" name="hobby2" id="hobby2" value="reiten">
+                <label for="hobby2">Reiten</label>
+                <input type="checkbox" name="hobby3" id="hobby3" value="tanzen">
+                <label for="hobby3">Tanzen</label>
+
+                <br><br>
+                <h2>Radiobuttons (anklickbar, nur eins auswählbar (in der Regel))</h2>
+                <p>Ähnlich wie die Checkboxen brauchen Radiobuttons ebenfalls ein value Attribut</p>
+                <input type="radio" name="anreise" id="anreise1" value="auto">
+                <label for="anreise1">per Auto</label>
+                <input type="radio" name="anreise" id="anreise2" value="bahn">
+                <label for="anreise2">per Bahn</label>
+                <input type="radio" name="anreise" id="anreise3" value="flugzeug">
+                <label for="anreise3">per Flugzeug</label>
+
+                <br><br>
+                <h2>Checbox mit Vorauswahl</h2>
+                <input type="checkbox" name="hobby1" id="hobby1" value="lesen" checked>
+                <label for="hobby1">Lesen</label>
+                <input type="checkbox" name="hobby2" id="hobby2" value="reiten">
+                <label for="hobby2">Reiten</label>
+                <input type="checkbox" name="hobby3" id="hobby3" value="tanzen">
+                <label for="hobby3">Tanzen</label>
+
+                <br><br>
+                <h2>Dateiupload</h2>
+                <input type="file" name="datei" id="datei">
+                
+                <br><br>
+                <h2>MIME-Types</h2>
+                <p>MIME (Multipurpose Internet Mail Extension)-Types definieren um welchen Datentyp es sich handelt</p>
+                <figure>
+                    <img src="../Bilder/mime-types.png" alt="Liste von MIME-Types">
+                    <figcaption>Liste von MIME-Types</figcaption>
+                </figure>
+
+                <br><br>
+                <h2>Dateiupload mit akzeptierten, eingeschränkten MIME-Type</h2>
+                <input type="file" name="datei1" id="datei1" accept="image/gif">
+
+                <br><br>
+                <h2>Einschränkte MIME-Types mit Wildcard *</h2>
+                <input type="file" name="datei3" id="datei3" accept="images/*">
+
+                <br><br>
+                <h2>Buttons</h2>
+                <h3>Submit Button</h3>
+                <p>Wird benötigt um das Formular an den Server schicken</p>
+                <input type="submit" name="senden" id="senden" value="Ab damit!">
+
+                <br>
+                <h3>Reset Button</h3>
+                <input type="reset" name="weg" id="weg" value="Formular löschen!">
+
+                <br>
+                <h3>Standard Button</h3>
+                <input type="button" name="knopf" id="knopf" value="Drück mich!">
+                <h3>Standard Button mit Button-Element</h3>
+                <button type="button" name="knopf2" id="knopf2" value="click_me_gedrueckt">Click me!</button>
+            </form>
+            <br><br>
+            <form action="#">
+                <h2>Gruppieren von Formularfeldern</h2>
+                <fieldset>
+                    <legend>Persönliche Daten:</legend>
+                    <p>
+                        <label for="nachname">Nachname</label><br>
+                        <input type="text" size="30" name="nachname" id="nachname">
+                        <br>
+                        <label for="vorname">Vorname</label><br>
+                        <input type="text" size="30" name="vorname" id="vorname">
+                    </p>
+                </fieldset>
+            </form>
+
+            <form action="#">
+                <h2>Pflichtfelder, sollten in der Regel mit * markiert sein, außerdem das required Attribut besitzen</h2>
+                <label for="nachname2">Nachname:*</label>
+                <input type="text" name="nachname2" id="nachname2" required>
+
+                <h3>Mit globalem title-Attribut kann man ein Tooltip erzeugen auf dem HTML-Element</h3>
+                <label for="nachname3">Nachname:*</label>
+                <input type="text" name="nachname3" id="nachname3" title="Dieses Textfeld benötigt eine Eingabe" required>
+
+                <br><br>
+                <h2>Fortschrittsbalken</h2>
+                <progress></progress>
+
+                <h2>Fortschrittsbalken mit Füllanzeige</h2>
+                <progress value="75" max="100"></progress>
+
+                <br><br>
+                <h2>Mess-Skala</h2>
+                <meter value="3" min="0" max="10" low="4" high="8" optimum="9" title="3/10"></meter>
+                <meter value="7" min="0" max="10" low="4" high="8" optimum="9" title="7/10"></meter>
+                <meter value="9" min="0" max="10" low="4" high="8" optimum="9" title="9/10"></meter>
+
+                <br><br>
+                <input type="number" min=0 max=99 name="alter" id="alter" size="30">
+            </form>
+
+
+        </main>
+    </body>
+</html>
+
+
+
+
+
+

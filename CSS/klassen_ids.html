@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Klassen und IDs</title>
+
+    <style type="text/css" media="screen">
+        * {
+            box-sizing: border-box;
+        }
+        
+        p {
+            font-family: Helvetica, Arial;
+            color: black;
+            font-size: 1em;
+        }
+
+        .hervorgehoben {
+            color: blue;
+            font-weight: bold;
+        }
+
+        p.gruen {
+            color: green
+        }
+
+        h4.gruen {
+            color: fuchsia;
+        }
+
+        .gruen {
+            color: lime;
+        }
+
+        #blaue-box {
+            background-color: aqua;
+        }
+
+        .mit-abstaenden {
+            /* margin: 2em;
+            margin-top: 0;
+            margin-right: 2em;
+            margin-bottom: 3em;
+            margin-left: 2em;
+            margin: 3em 2em 3em 2em;
+            margin: 3em 2em; */
+            /* padding: 3em; */
+            /* padding-top: 1.5em;
+            padding-right: 3em;  */
+            padding: 1.5em 2.4em 1.3em 2.9em;
+        }
+
+        #mit-border {
+            border-width: 5px;
+            /* border-top-width: 1px;
+            border-right-width: 2px;
+            border-bottom-width: 3px;
+            border-left-width: 4px; */
+            /* border-width: 1px 2px 3px 4px; */
+            border-style: solid;
+            border-radius: 5px;
+            
+            
+            
+            padding: 10px;
+        }
+
+
+    </style>
+
+</head>
+<body>
+    <p>Dies ist der erste Absatz</p>
+    <p class="hervorgehoben">Dies ist der zweite Absatz.</p>
+    <p class="mit-abstaenden">Dies ist der dritte Absatz.</p>
+    <p>Dies ist der vierten Absatz.</p>
+    
+    
+    
+    <p id="mit-border">Dies ist der fünfter Absatz.</p>
+    <span class="gruen">Ich bin ein lime-Text!</span>
+    
+    <p id="blaue-box">Ich bin eine blaue Box!</p>
+
+    <h4 class="gruen">Ich bin ein hervogehobenes H4</h4>
+
+</body>
+</html>

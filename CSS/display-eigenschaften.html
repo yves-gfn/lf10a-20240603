@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display-Eigenschaften</title>
+
+<style>
+    .block {
+        display: block;
+        /* width: 100px; */
+        height: 50px;
+        margin: 10px;
+        background-color: lightblue;
+    }
+
+    .inline {
+        display: inline;
+        width: 100px; /* wird ignoriert */
+        height: 50px; /* wird ignoriert */
+        margin: 10px;
+        background-color: lightgreen;
+    }
+
+    .inline-block {
+        display: inline-block;
+        width: 100px;
+        height: 50px;
+        margin: 10px;
+        background-color: lightcoral;
+    }
+</style>
+
+</head>
+
+
+<body>
+    <h1>Display Eigenschaften</h1>
+    <p><b>Beispiel für <code>display: block</code>:</b></p>
+    <div class="block">Block Element</div>
+    <span>Text zur Verdeutlichung</span>
+
+    <p><b>Beispiel für <code>display: inline</code>:</b></p>
+    <div class="inline">Inline Element</div>
+    <span>Text zur Verdeutlichung</span>
+
+    <p><b>Beispiel für <code>display: inline-block</code>:</b></p>
+    <div class="inline-block">Inline-Block Element</div>
+    <span>Text zur Verdeutlichung</span>
+</body>
+</html>

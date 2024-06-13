@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="de">    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tabellen mit Rowspan</title>
+        <style>
+            table, th, td {
+                border: 1px solid black;
+                border-collapse: collapse;
+            }
+
+            th, td {
+                padding: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Tabellen mit Rowspan</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Lernfeld</th>
+                    <th>Bildunsgträger</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Hans</td>
+                    <td>LF10a</td>
+                    <td rowspan="3">GFN</td>
+                </tr>
+                <tr>
+                    <td>Ankur</td>
+                    <td>LF10a</td>
+                </tr>
+                <tr>
+                    <td>Maha</td>
+                    <td>LF10a</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>
+

@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" type="text/css" media="screen">
+    <title>CSS-Mitschrift</title>
+</head>
+<body>
+    <main>
+        <h1>CSS-Mitschrift</h1>
+        <h3>Was ist CSS?</h3>
+        <p>CSS steht für <strong>Cascading Stylesheet</strong>. CSS kann man sich vorstellen, wie eine Formatvorlage aus z.B. Word.
+            Wir können unterschiedliche Einstellungen für unterschiedliche Elemente vornehmen, die dann meistens
+            auf allen Seiten angewendet werden. 
+        </p>
+        <h4>Was kann man z.B. mit CSS verändern?</h4>
+        <ul>
+            <li>Schriftart, Schriftfarbe, Schriftgröße usw...</li>
+            <li>Hintergrundfarbe, Hintergrundbilder und vieles mehr</li>
+        </ul>
+        <p>
+            Mit CSS kann ebenfalls für die gleiche Webseite unterschiedliche Geräte ansprechen, z.B. Drucker, Smartphones, Tablets...
+            Ebenfalls werden mit CSS Webseiten responsiv gemacht. Das bedeutet, dass der Inhalt und das Layout sich automatisch auf 
+            die Ausgabegeräte-Breite anpasst. <br>
+            Mit CSS gelingt uns die Trennung zwischen Form und Struktur. In HTML sollten möglichst wenig Styling-Informationen übrig bleiben, dafür
+            wird zukünftig CSS verwendet.
+            Die aktuelle von CSS ist CSS3, die kam 2010 raus. Die erste Version kam 1996 raus.  
+        </p>
+
+        <h3>Wie verwendet man CSS?</h3>
+        <ul>
+            <li>Man kann CSS als eigene Datei erstellen und dann in HTML per Link-Tag einbinden</li>
+            <li>Man kann CSS in den Head-Bereich mit dem style-Tag schreiben</li>
+            <li>Man kann CSS direkt "inline" verwenden, das heißt direkt beim Tag. Hierfür nutzt man das "style-Attribut".</li>
+        </ul><br>
+
+        <span>Beispieleinbindung im head</span><br>
+        <img src="Bilder/01_CSS-im-head.jpg" alt="Einbindung von CSS im Head - Bereich">
+
+        <p>Der &lt;style&gt;-Bereich definiert die Stelle, indem die CSS-Vorgaben gemacht werden.
+            Der MIME-Type (wie bereits gelernt) muss angegeben werden mit type="text/css".
+            Man kann unterschiedliche media - Anweisungen geben, z.B.
+            <ul>
+                <li>media = "screen" (Bildschirmdarstellung)</li>
+                <li>media = "print" (Druckdarstellung)</li>
+                <li>media = "all" (deckt alle Medien ab)</li>
+            </ul>
+        </p>
+
+        <span>Beispiel von all, screen und print</span><br>
+        <img src="Bilder/02_unterschiedliche-media-typen.jpg" alt="Zeigt die unterschiedlichen Media-Types, die gleichzeitig angewendet werden können">
+
+        <h3>Allgemeine Syntax von CSS</h3>
+        <span>Beispiel einer CSS-Syntax</span><br>
+        <img src="Bilder/03_einfache-css-syntax.jpg" alt="Zeigt wie das p-Element Schriftart zugewiesen bekommt">
+
+        <h4>Rückfall Schriftarten und Schriftgröße verändern</h4>
+        <p>Die Schriftart funktioniert nur, wenn sie auf dem System des Anwenders installiert ist. Man kann dem Browser fall-back - Schriftarten
+            anbieten, die er verwendet, wenn die Schriftarten nicht installiert sind. 
+        </p>
+        <span>Beispiel mit fallback-Schriftarten und Schriftgröße</span><br>
+        <img src="Bilder/04_schriftarten_fallback_schriftgroesse.jpg" alt="Zeigt fallback-Schriftarten und Größenveränderung">
+
+        <h3>Maßeinheiten in CSS(abseits des CSS-Einbindens)</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Einheit</th>
+                    <th>Beschreibung</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>px</td>
+                    <td>Steht Pixel, kann auf unterschiedlichen Ausgabegeräten anders aussehen, aufgrund Auflösung</td>
+                </tr>
+                <tr>
+                    <td>%</td>
+                    <td>Prozent, relative Maßeinheit</td>
+                </tr>
+                <tr>
+                    <td>em</td>
+                    <td>Vielfaches der aktuellen Schriftgröße, nennt man eigentlich <i>"Geviert"</i>. Als Grundlage wird Breite des Großbuchstaben - M in der aktuellen Schriftart verwendet</td>
+                </tr>
+                <tr>
+                    <td>rem</td>
+                    <td>Das funktioniert wie em, geht von der Schriftgröße des root-Documents aus</td>
+                </tr>
+                <tr>
+                    <td>vw</td>
+                    <td>viewport width, prozentualer Anteil der Breite des Anzeigefensters</td>
+                </tr>
+                <tr>
+                    <td>vh</td>
+                    <td>viewport height, prozentuale Anteil der Höhe des Anzeigefensters</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>Einbinden als externe Datei</h3>
+        <p>Es wird mühselig den CSS Code immer in den head - Bereich des HTML Dokuments zu schreiben.
+            Das sorgt für enormen Wartungsbedarf und ist einfach nicht praxistauglich. 
+            Deshalb kann CSS auch als externe Datei eingebunden werden. 
+        </p>
+        <img src="Bilder/05_externe_CSS_datei_einbinden.jpg" alt="Zeigt Einbindung externer CSS-Datei">
+
+        <h3>Inline-Formatierungen</h3>
+        <p style="color:teal">
+            Inline-Formatierungen sind die ineffektivste Methode, sollte nur in Ausnahmenfällen verwendet werden.
+            Die CSS-Anweisung gilt exakt nur für dieses <strong>eine</strong> Element. Die Anweisungen werden
+            direkt in das HTML geschrieben. Wird erreicht durch das style - Attribut.
+        </p>
+        <span>Beispiel Inline-Formatierung</span><br>
+        <img src="Bilder/06_inline_formatierung.jpg" alt="Zeigt Beispiel der Inline Formatierung des aktuellen p's mit der Farbe teal">
+
+        <h3>CSS-Farben und Hexadezimaler Farbraum</h3>
+        <p>CSS Farben werden u.a. im Hexadezimalen Farbraum angegeben.
+            Dieser besteht aus sechs Farbkanälen. <br>
+            #rrggbb - zwei Farbkanäle für rottöne, zwei für grün und zwei für blau
+        </p>
+        <p>Um die Textfarbe auf Rot zu setzen, notiert man: <br>
+            <img src="Bilder/07_hexfarbraum_rot.jpg" alt="Zeigt einstellen des P - Tags in roter Farbe mit Hexadezimalen Farbraum">
+        </p>
+
+        <h4 style="color: rgba(255,0,0,0.4)">Der dezimale RGB - Farbraum</h4>
+        <p>Ebenfalls ist möglich den Farbraum als RGB-Wert mit Dezimalzahlen darzustellen</p>
+        <code>color: rgb(255, 0, 0); reines Rot</code><br>
+        <code>color: rgb(191, 103, 51); rotbraun</code>
+
+        <p>Man kann mit dem RGB-Farbraum ebenfalls Transparenzen festlegen:</p>
+        <code>color: rgba(0,0,0, 0.4); schwarz mit 40% Deckkraft, 1 = 100%, 0.0 = 0% Deckkraft</code>
+
+        <br><br>
+        <h3>CSS arbeitet nach dem Vererbungsprinzip</h3>
+        <p>
+            Viele CSS Vorgaben gelten ebenfalls für verschachtelte Elemente in einem Element, werden als "weiter vererbt."
+            Es gibt aber ebenefalls einige Eigenschaften, die nicht vererbt werden. 
+            Nachschauen kann man hier: 
+            <a href="https://www.codecademy.com/resources/docs/css/inheritance">CSS vererbbare Eigenschaften</a>
+        </p>
+        
+        <h4>Vererbungskonzept</h4>
+        <ul>
+            <li>Übergeordnete Elemente werden als Ancestor-Elemente (Vorfahren) definiert</li>
+            <li>Das <strong>direkt</strong> übergeordnete Element wird als Parent-Element (Eltern) bezeichnet</li>
+            <li>In einem Element enthaltene Tags nennt Descendants (Nachfahren)</li>
+            <li>Das direkt enthaltene Element ist das Child-Element (Kinder)</li>
+        </ul>
+        <span>Veranschaulichung der Rollen am Beispiel</span><br>
+        <img src="Bilder/08_vererbungsrollen.jpg" width="1100" alt="Zeigt die Rollen von Elementen im Bezug auf andere Elemente">
+
+        <br><br>
+        <h4>Hintergrundfarbe definieren</h4>
+        <p>Die Hintergrundfarbe kann in CSS mit der Eigenschaft <strong>background-color</strong> definiert werden.
+        Die Eigenschaft vererbt sich nicht auf ihre Nachfahren-Elemente.
+        </p>
+        <span>Beispiel wie man die background-color setzt</span><br>
+        <img src="Bilder/09_background_color.jpg" alt="Setzen der background-color">
+
+        <br><br>
+        <h3>Vertiefend zu <i>em</i> und <i>rem</i></h3>
+        <p>Em und rem sind wichtig, weil wir feste pixel-größen vermeiden wollen.
+            Die Gründe z.B. <strong>Resonsives Design</strong>: Im Gegensatz gedruckten Seiten müssen Weblayouts an unterschiedliche Anzeigengrößen angepasst sein. Eine Schriftgröße, die bei euch auf dem Desktop gut lesbar ist, muss nicht auf dem Smartphone gut lesbar sein, sondern wird z.B. viel zu klein angezeigt. Ebenfalls ist die <strong>Barrierefreiheit</strong> wichtig,
+            die Probleme haben kann mit festen - Pixelwerten. <strong>Bitte zukünftig bei Texten immer em oder rem verwenden!</strong>
+        </p>
+
+        <br><br>
+        <h3>Weitere Textformatierungseigenschaften</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Eigenschaft</th>
+                    <th>Bedeutung</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>font-weight</td>
+                    <td>bold (fett), bolder (fetter), lighter (dünner), normal (normale Schriftgewicht), 
+                        100 (extra dünn), 200, 300, 400, 500, 600, 700, 800, 900 (extra fett)
+                    </td>
+                </tr>
+                <tr>
+                    <td>font-style</td>
+                    <td>italic (kursiv), oblique (schräggestellt, falscher "künstlicher" Kursivschnitt), normal</td>
+                </tr>
+                <tr>
+                    <td>text-decoration</td>
+                    <td>underline (unterstrichen), overline (Linie darüber), line-trough (durchgestrichen), none (keine Dekoration)</td>
+                </tr>
+                <tr>
+                    <td>font-variant</td>
+                    <td>small-caps (Kapitälchen, alle Buchstaben werden groß geschrieben, auch die Kleinen, die aber kleiner sind als die eigentlichen Großbuchstaben), normal (keine Schriftvariante, Standard)</td>
+                </tr>
+                <tr>
+                    <td>word-spacing</td>
+                    <td>Wortabstand einstellen. Erwartet numerische Angaben, jedoch keine Prozentangaben.</td>
+                </tr>
+                <tr>
+                    <td>letter-spacing</td>
+                    <td>Zeichenabstand einstellen. Erwartet numerische Angaben, jedoch keine Prozentangaben.</td>
+                </tr>
+                <tr>
+                    <td>line-height</td>
+                    <td>Zeilenabstand einstellen. Erwartet numerische Angaben. AUCH Prozentangaben sind erlaubt. Wird oft Standardmäßig bei Webseiten leicht vergrößert, um die Texte besser lesen zu können.</td>
+                </tr>
+                <tr>
+                    <td>text-align</td>
+                    <td>left (linksbündig, Standardeinstellunbg), center (zentriert), right (rechtsbündig), justify (Blocksatz, der Text wird auf die komplette verfügbare gezogen, dadurch können größere Wortabstände entstehen)</td>
+                </tr>
+                <tr>
+                    <td>text-indent</td>
+                    <td>Erstzeileneinzug. Erwartet numerische Angaben.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>Hyperlinks formatieren</h3>
+        <p>Hyperlinks formatieren gehört zu einer Standard-Aktion beim Designen von Webseiten. Mit "text-decoration" kann das Unterstreichen angepasst werden. Häufig wird es aber entfernt. </p>
+        <span>Beispiel Hyperlink-Formatierung</span><br>
+        <img src="Bilder/10_hyperlink-formatieren.jpg" alt="Beispielformatierung a-Tag, text-decoration entfernt und farbe auf dunkles rot gesetzt">
+
+        <h4>Pseudoklassen auf Hyperlinks anwenden</h4>
+        <span>BITTE NICHT ANKLICKEN</span> <a href="https://www.lebenshof-auenland.de/">Lebenshof Auenland</a><br>
+        <span>Kann angeklickt werden...</span> <a href="https://www.w3schools.com/">W3-Schools</a><br>
+        <span>Weiterer Link zum W3C...</span> <a href="https://www.w3.org/Style/CSS/Overview.en.html">W3C-CSS direkt</a><br>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Pseudoklasse</th>
+                    <th>Beschreibung</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>a:link</td>
+                    <td>Nicht besuchter Link</td>
+                </tr>
+                <tr>
+                    <td>a:visited</td>
+                    <td>Besuchter Link</td>
+                </tr>
+                <tr>
+                    <td>a:focus</td>
+                    <td>Link ausgewählt mit Tabulatortaste</td>
+                </tr>
+                <tr>
+                    <td>a:hover</td>
+                    <td>Link wird mit Maus gehovert</td>
+                </tr>
+                <tr>
+                    <td>a:active</td>
+                    <td>Link wird gedrückt mit linker Maustaste</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>Häufig beschränkt sich in der Praxis allerdings auf hover und visited. a:link muss man nicht spezifisch angeben,
+            wenn man den Link generell anpasst. Hover funktioniert nicht besonders gut mit Touchscreens! Dementsprechend sollte <b>hover</b> kein elementares Feature für eure Webseite sein, sondern ein Bonus für Mausschubser.
+        </p>
+
+        <h3>Pseudo-Elemente</h3>
+        <p>Ein Pseudo-Element ist einem Selektor hinzugefügtes Schlüsselwort, mit dem man einen bestimmten Teil des ausgewählten Elements formatieren kann.</p>
+
+        <span>Beispiel von before und after auf h3</span><br>
+        <img src="Bilder/11_before_und_after.jpg" alt="CSS Beispielcode von before und after"><br>
+        <img src="Bilder/12_before_und_after_effekt.jpg" alt="sichtbarer Effekt der CSS Angaben beim H3">
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Pseudoelement</th>
+                    <th>Beschreibung</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>:after</td>
+                    <td>automatisch nach einem Element generierter Inhalt</td>
+                </tr>
+                <tr>
+                    <td>:before</td>
+                    <td>automatisch vor einem Element generierter Inhalt</td>
+                </tr>
+                <tr>
+                    <td>:first-letter</td>
+                    <td>erster Buchstabe eines Elements formatieren</td>
+                </tr>
+                <tr>
+                    <td>:first-line</td>
+                    <td>erste Textzeile eines Elements formatieren</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>Auswahl von Elementen mit Klassen und IDs</h3>
+        <p>Mit Klassen kann man "Gruppen" von Elementen defnieren. Ändert man diese Klasse in CSS, bekommt jedes Element mit der Klasse diese Änderungen. Klassen werden über den Punkt . und dem Klassennamen angesprochen.</p>
+        <span>Beispiel einer Klasse in HTML mit dem Keyword class</span><br>
+        <img src="Bilder/13_klassen.jpg" alt="Anwenden der Klasse hervorgehoben in HTML mit Keyword class"><br>
+        <span>Klassendeklaration in CSS</span><br>
+        <img src="Bilder/14_klasse_in_css.jpg" alt="Deklaration der Klasse hervorgehoben in CSS">
+
+        <h4>IDs in CSS</h4>
+        <p>IDs sind dafür da, um einem Element einen eindeutigen Namen zu geben. IDs sollten nur einmalig nach Coding-Convention im Quellcode vorkommen! Natürlich sind unterschiedliche IDs mit anderem Namen inordnung. IDs werden über die Raute # plus Namen der ID angesprochen.</p>
+        <span>Beispiel einer ID in HTML mit dem Keyword id</span><br>
+        <img src="Bilder/15_id-blaue-box.jpg" alt="Anwenden der ID blaue-box in HTML mit Keyword id"><br>
+        <span>ID-Deklaration in CSS</span><br>
+        <img src="Bilder/16_id-blaue-box_in_CSS.jpg" alt="Deklarion der ID blaue-box in CSS">
+
+        <h4>Bedingte Auswahl von class und id-Selektoren</h4>
+        <p>Mit <b>element.className</b> kann man eine Bedingung herstellen, nämlich so, dass sowohl das Element als auch die Klasse vorkommen müssen,
+            damit die CSS - Deklaration angewendet wird. Das gleiche ist auch <b>element.idName</b> möglich. In der Regel werden Klassen aber häufig ohne diese Bedingung angewendet, da man so "unterschiedliche" Klassendeklarationen ermöglichen, was zur Verwirrung führt.
+        </p>
+
+        
+        <h3>Hintergrund Bilder einbauen und steuern</h3>
+        <p>Um Hintergrund-Bilder einzubinden bietet CSS die Eigenschaft background-image an. Weitere Eigenschaften ermöglichen das Steuern des Bildes.</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Eigenschaft</th>
+                    <th>Beschreibung</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>background-image</td>
+                    <td>Über <b>"url(pfad/zur/grafik.jpg)"</b> kann hiermit das Bild eingebunden werden</td>
+                </tr>
+                <tr>
+                    <td>background-repeat</td>
+                    <td>Hat die Werte repeat (wiederholen in x- und y-Achse, Standardwert), repeat-x (wiederholen auf der x-Achse), repeat-y (wiederholen auf der y-Achse) und no-repeat (nicht wiederholen)
+                    </td>
+                </tr>
+                <tr>
+                    <td>background-position</td>
+                    <td>Bei Backround-Position können zwei numerische Werte für den Abstand von dem linken und oberen Rand angegeben werden, oder aber mit top(oben bündig), bottom (unten bündig), center(zentriert), left (linksbündig) und right(rechtsbündig) eingestellt werden</td>
+                </tr>
+                <tr>
+                    <td>background-size</td>
+                    <td>Über zwei numerische Werte können hier Breite und Höhe angegeben werden, alternativ kann man mit den Werten cover oder contain arbeiten. Bei cover versucht das Bild das Element komplett auszufüllen (mit möglichen Verlusten in der Höhe oder Breite), bei contain wird das Bild komplett angezeigt, allerdings das eigentliche Element wird nicht mehr gänzlich ausgefüllt. </td>
+                </tr>
+                <tr>
+                    <td>background-attachment</td>
+                    <td>Mit background-attachment kann einen Wasserzeicheneffekt erzeugen. Bietet zwei Werte: scroll(mitscrollen, Standardeinstellung), fixed(Hintergrundbild bleibt stehen)</td>
+                </tr>
+                <tr>
+                    <td>background</td>
+                    <td>Shorthand-Eigenschaft kombiniert die unterschiedlichen Eigenschaften. Dabei kann eine gedachte Reihenfolge so aussehen: "background: color url repeat position-x positiony-y attachement". Die Reihenfolge ist egal, außer bei position-x und position-y, weil CSS hier ersten Wert immer als x-Wert interpretiert. Es müssen auch nicht alle Eigenschaften verwendet werden.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>Außenabstände und Innenabstände</h3>
+        <p>Um Abstände zwischen Elementen steuern zu können, gibt es in CSS die Möglichkeit den Außenabstand wie den Inneabstand zu definieren. Außenabstand = margin (gelb in der Firefox Webedevelopment-Konsole, braun in Chrome). Innenabstand = padding (lila in der Firefox Webdevelopment-Konsole, grün in Chrome)</p>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Eigenschaft</th>
+                    <th>Beschreibung</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>margin</td>
+                    <td>Shorthand-Eigenschaft und defacto Standard. Mit einem numerischen Wert kann der Außenabstand für alle Seiten definiert werden, mit vier Werten kann der Außenabstand im Uhrzeigersinn von top, right, bottom und left definiert werden, mit zwei Werten steht der erste Wert für top/bottom und der zweite Wert für left/right.</td>
+                </tr>
+                <tr>
+                    <td>margin-top <br>
+                        margin-right <br>
+                        margin-bottom <br>
+                        margin-left <br>
+                    </td>
+                    <td>
+                        Einzeleigenschaften, um entsprechende Seiten mit Außenabständen zu versehen.
+                    </td>
+                </tr>
+                <tr>
+                    <td>padding</td>
+                    <td>Shorthand-Eigenschaft und defacto Standard. Mit einem numerischen Wert kann der Innenabstand für alle Seiten definiert werden, mit vier Werten kann der Innenabstand im Uhrzeigersinn von top, right, bottom und left definiert werden, mit zwei Werten steht der erste Wert für top/bottom und der zweite Wert für left/right.</td>
+                </tr>
+                <tr>
+                    <td>padding-top <br>
+                        padding-right <br>
+                        padding-bottom <br>
+                        padding-left <br>
+                    </td>
+                    <td>
+                        Einzeleigenschaften, um entsprechende Seiten mit Innenabständen zu versehen.
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>Konturen (Borders)</h3>
+        <p>Mit Konturen können Ränder in CSS definiert werden. Mit diversen Eigenschaften können diese definiert werden.</p>
+        <table>
+            <thead>
+                <tr>
+                    <td>Eigenschaft</td>
+                    <td>Beschreibung</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>border</td>
+                    <td>Shorthand-Eigenschaft, vereint border-width, border-style und border-color.</td>
+                </tr>
+                <tr>
+                    <td>border-width</td>
+                    <td>Breiten aller Seiten festlegen. Als Alternative gibt es border-top-width, border-right-width, border-left-width und border-bottom-width um einzelne Seiten zu definieren.</td>
+                </tr>
+                <tr>
+                    <td>border-style</td>
+                    <td>Defniert Art der Kontur, zur Auswahl stehen solid (durchgezogen), dotted (gepunkted), dashed (gestrichelt), double (doppelt), groove, ridge, inset, outset (3D-Effekt), none (keine Kontur, sinvoll zum Abschalten vorhandener Konturen)</td>
+                </tr>
+                <tr>
+                    <td>border-color</td>
+                    <td>Definiert die Farbe des Rahmens.</td>
+                </tr>
+                <tr>
+                    <td>border-radius</td>
+                    <td>Ermöglicht das Abrunden der Konturen, bzw. der Ecken der Konturen. Benötigt numerischen Wert. Je größer dieser ist, desto runder ist die Ecke. </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>Farbverläufe</h3>
+        <p>Farbverläufe mussten früher mit dafür erstellten Pixelgrafiken genutzt werden.Wie in den meisten Grafikprogrammen kann man lineare und radiale Verläufe mit CSS darstellen.</p>
+
+        <code>background-image: linear-gradient(Winkel/Richtung, Anfangsfarbe, Endfarbe)</code>
+
+        <h4>Linearer vertikaler Farbverlauf, 180°</h4>
+        <div class="verlauf" id="farbverlauf1"></div>
+
+        <h4>Linearer vertikaler Farbverlauf, 0°</h4>
+        <div class="verlauf" id="farbverlauf2"></div>
+
+        <h4>Linearer diagonaler Farbverlauf, 45°</h4>
+        <div class="verlauf" id="farbverlauf3"></div>
+
+        <h4>Linearer mehrfarbiger Farbverlauf, 90°</h4>
+        <div class="verlauf" id="farbverlauf4"></div>
+
+        <h4>Color Stop bei linearen und radialen Farbverläufen möglich</h4>
+        <p>Color Stop erzeugt in diesem Beispiel Verlauf von links nach rechts, wobei der Übergang von Rot nach Blau bereits nach 15% des Verlaufs erfolg, und niht - wie Standardmäßig - erst bei 50%</p>
+        <div class="verlauf" id="farbverlauf5"></div>
+
+        <h4>Radiale Gradienten Ellipse (default)</h4>
+        <div class="verlauf" id="farbverlauf6"></div>
+
+        <h4>Radiale Gradienten erzwungener Circle</h4>
+        <div class="verlauf" id="farbverlauf7"></div>
+
+        <h4>Radiale Gradient erzwunge Ellipse über Größenangaben</h4>
+        <div class="verlauf" id="farbverlauf8"></div>
+
+        <h4>Radiale Gradient mit Positionangaben</h4>
+        <div class="verlauf" id="farbverlauf9"></div>
+
+        <h4>Konischer Gradient</h4>
+        <div class="verlauf" id="farbverlauf10"></div>
+
+        <p>Für weitere Recherche: <a href="https://www.delftstack.com/de/howto/css/css-gradient-background/" target="_blank">Klick mich!</a></p>
+
+
+        <h3>Background - Bild mit Gradient entstören</h3>
+        <div id="entstoert"><p>ich bin lesbarer Text!</p></div>
+
+        <h3>Textumfluss (float)</h3>
+        <p>Normalerweise legt HTML Elemente immer so ab, wie sie im Quellcode auftreten. Dieses können mit manipulieren, z.B. mit float. Float wurde früher verwendet um Layouts zu gestalten, ist heutzutage aber verpönt. Trotzdem kann man float natürlich für seinen "eigentlichen" Zweck verwenden und zwar: Text um Elemente fließen zu lassen. </p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Eigenschaft</th>
+                    <th>Beschreibung</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>float:right</td>
+                    <td>Das Element wird von <strong>allen nachfolgenden</strong> Elementen rechts umflossen</td>
+                </tr>
+                <tr>
+                    <td>float:left</td>
+                    <td>Das Element wird von <strong>allen nachfolgenden</strong> Elementen links umflossen</td>
+                </tr>
+                <tr>
+                    <td>clear:left, clear:right, clear:both</td>
+                    <td>Hebt den float des <strong>vorherigen</strong> Elements auf und packt folge Elemente wieder in den normalen Layoutfluss</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p>
+            <img id="van-gogh" class="float-left" src="Bilder/Hintergrundbilder/vincent-van-gogh.jpg" alt="Bild von Van Gogh">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum ipsa, mollitia, dolores maiores nam incidunt corrupti aperiam, tempore deleniti earum quae hic facere unde accusantium expedita autem atque distinctio nobis! Alias porro debitis facilis ut cum in magni eligendi velit nihil! Quas modi nobis numquam beatae saepe asperiores deleniti rem? Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum ipsa, mollitia, dolores maiores nam incidunt corrupti aperiam, tempore deleniti earum quae hic facere unde accusantium expedita autem atque distinctio nobis! Alias porro debitis facilis ut cum in magni eligendi velit nihil! Quas modi nobis numquam beatae saepe asperiores deleniti rem? Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum ipsa, mollitia, dolores maiores nam incidunt corrupti aperiam, tempore deleniti earum quae hic facere unde accusantium expedita autem atque distinctio nobis! Alias porro debitis facilis ut cum in magni eligendi velit nihil! Quas modi nobis numquam beatae saepe asperiores deleniti rem? Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum ipsa, mollitia, dolores maiores nam incidunt corrupti aperiam, tempore deleniti earum quae hic facere unde accusantium expedita autem atque distinctio nobis! Alias porro debitis facilis ut cum in magni eligendi velit nihil! Quas modi nobis numquam beatae saepe asperiores deleniti rem?
+        </p>
+        <p class="clear">
+            <img id="van-gogh" class="float-right" src="Bilder/Hintergrundbilder/vincent-van-gogh.jpg" alt="Bild von Van Gogh">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum ipsa, mollitia, dolores maiores nam incidunt corrupti aperiam, tempore deleniti earum quae hic facere unde accusantium expedita autem atque distinctio nobis! Alias porro debitis facilis ut cum in magni eligendi velit nihil! Quas modi nobis numquam beatae saepe asperiores deleniti rem? Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum ipsa, mollitia, dolores maiores nam incidunt corrupti aperiam, tempore deleniti earum quae hic facere unde accusantium expedita autem atque distinctio nobis! Alias porro debitis facilis ut cum in magni eligendi velit nihil! Quas modi nobis numquam beatae saepe asperiores deleniti rem? Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum ipsa, mollitia, dolores maiores nam incidunt corrupti aperiam, tempore deleniti earum quae hic facere unde accusantium expedita autem atque distinctio nobis! Alias porro debitis facilis ut cum in magni eligendi velit nihil! Quas modi nobis numquam beatae saepe asperiores deleniti rem? Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum ipsa, mollitia, dolores maiores nam incidunt corrupti aperiam, tempore deleniti earum quae hic facere unde accusantium expedita autem atque distinctio nobis! Alias porro debitis facilis ut cum in magni eligendi velit nihil! Quas modi nobis numquam beatae saepe asperiores deleniti rem?
+        </p>
+
+        <h3 class="clear">Overflow</h3>
+        <p> Wenn man Breite und Höhe eines Elements fest    definiert (normalerweise gibt man nur eine Seite, z.B. width: 80%, ohne height oder height:auto) kann es passieren, dass Text einen "Übersatz" erzeugt. <br> 
+        Mit der <b>over - Eigenschaft</b> kann man das Verhalten steuern.
+        </p>
+
+        <div class="feste-groesse">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum ipsa, mollitia, dolores maiores nam incidunt corrupti aperiam, tempore deleniti earum quae hic facere unde accusantium expedita autem atque distinctio nobis! Alias porro debitis facilis ut cum in magni eligendi velit nihil! Quas modi nobis numquam beatae saepe asperiores deleniti rem? Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum ipsa, mollitia, dolores maiores nam incidunt corrupti aperiam, tempore deleniti earum quae hic facere unde accusantium expedita autem atque distinctio nobis! Alias porro debitis facilis ut cum in magni eligendi velit nihil! Quas modi nobis numquam beatae saepe asperiores deleniti rem? Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum ipsa, mollitia, dolores maiores nam incidunt corrupti aperiam, tempore deleniti earum quae hic facere unde accusantium expedita autem atque distinctio nobis!</p> 
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Eigenschaft</th>
+                    <th>Beschreibung</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>overflow: visible</td>
+                    <td>der Inhalt ragt ggf. aus dem Element heraus (Standard)</td>
+                </tr>
+                <tr>
+                    <td>overflow: hidden</td>
+                    <td>der Inhalt wird ggf. abgeschnitten</td>
+                </tr>
+                <tr>
+                    <td>overflow: scroll</td>
+                    <td>der Browser erzeugt Scrollbalken für das Element, allerdings auch, wenn gar keine benötigt werden</td>
+                </tr>
+                <tr>
+                    <td>overflow: auto</td>
+                    <td>der Browser erzeugt Scrollbalken für das Element, wenn sie nötig sind</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>Mindestbreite / Mindesthöhe</h3>
+        <p>Mit den Eigenschaft min-width, min-height und max-width, min-width kann man garantieren, dass Elemente nur eine gewisse Größe erreichen können oder verkleinert werden können. Das ist z.B. bei Elementen sinnvoll, die relativ zur Größe mit Skalieren.</p>
+
+        <span>Beispiel Bild, dass auf 30% skaliert wurde und minimal 200px in der Breite klein werden kann und 400px in der Größe breit werden kann. </span> <br>
+        <img id="white-elegant" src="Bilder/Hintergrundbilder/white-elegant-texture.jpg" alt="weiß graues Muster">
+
+        <h3>Positionierung von Elementen</h3>
+        <p>Mit CSS kann jedes Element beliebig platziert werden. Mit der Eigenschaft position kann angegeben werden, welche Positionierungsmethode verwendet wird.</p>
+
+        <img id="logo" src="Bilder/logo.png" alt="Unser Logo">
+
+        <img id="relative-test" src="Bilder/Hintergrundbilder/white-elegant-texture.jpg" alt="">
+
+        <div id="image-container">
+            <img id="logo2" src="Bilder/logo.png" alt="Unser Logo 2">
+            <img id="globe" src="Bilder/globe.svg" alt="stilisierter Globus">
+        </div>
+
+        <hr>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Eigenschaft</th>
+                    <th>Beschreibung</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>position: static</td>
+                    <td>Standardplatzierungsmethode, Elemente werden platziert, indem sie sich gegenseitig verdrängen dem Quellcode entsprechend</td>
+                </tr>
+                <tr>
+                    <td>position: relative</td>
+                    <td>Ähnlich wie static, legt Elemente anhand des Objekflusses ab, lässt sich aber mit top, left u.a. manipulieren</td>
+                </tr>
+                <tr>
+                    <td>position: absolute</td>
+                    <td>Verhält sich komplett anders wie static und relative. Das Element wird aus dem Objektfluss herausgenommen und auf eine höhere Ebene gesetzt. Diese Ebene kann bei mehreren Elementen mit dem z-index definiert werden. position: absolute orientiert sich bei seiner Positionierung an das Element im Objektfluss was <strong>nicht</strong> position: static ist. Damit kann es gut mit position:relative verwenden, als eine Art "ankerpunkt", an dem sich position:absolute orientiert. </td>
+                </tr>
+                <tr>
+                    <td>position: fixed</td>
+                    <td>Funktioniert ähnlich wie position:absolute bleibt an Ort und Stelle und scrollt mit und über den restlichen Inhalt hinweg.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>Animation mit transitions</h3>
+        <p><code>transition: zu-animierende-eigenschaft dauer beschleunigung</code></p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Syntax-Platzhalter</th>
+                    <th>Beschreibung</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>zu-animierende-eigenschaft</td>
+                    <td>An dieser Stelle wird die Eigenschaft / Eigenschaften notiert, die animiert werden sollen. Hier kann auch <b>all</b> eingetragen werden, für alle Eigenschaften, die sich ändern.</td>
+                </tr>
+                <tr>
+                    <td>dauer</td>
+                    <td>Dauer der Animation in Sekunden</td>
+                </tr>
+                <tr>
+                    <td>beschleunigung</td>
+                    <td>Gibt die Methode der Animation an</td>
+                </tr>
+                <tr>
+                    <td>linear</td>
+                    <td>gleichbleibende Geschwindigkeit</td>
+                </tr>
+                <tr>
+                    <td>ease</td>
+                    <td>beschleunigt am Anfang, bremst an Ende (Standardeinstellung)</td>
+                </tr>
+                <tr>
+                    <td>ease-in</td>
+                    <td>langsam am Anfang</td>
+                </tr>
+                <tr>
+                    <td>ease-out</td>
+                    <td>langsam am Ende</td>
+                </tr>
+                <tr>
+                    <td>ease-in-out</td>
+                    <td>langsam am Anfang und Ende</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h4>Animierten Bild</h4>
+        <img class="bigger-image" src="Bilder/Hintergrundbilder/vincent-van-gogh.jpg" alt="Bild von Van Gogh">
+
+        <h3>Ändern der Anzeigeart</h3>
+        <p>Wie bereits bekannt gibt es in HTML zwei Arten von Elementen. Blockelemente (z.B. div, p, h1-h6, header, main, footer, nav) die Absätze erzeugen. Des Weiteren auch inline-Elemente (z.B. strong, em, b, i, a, span), die innerhalb eines Fließtextes benutzt werden können. Mit CSS kann die Darstellungsart über die display-Eigenschaft verändert werden.</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Eigenschaft</th>
+                    <th>Beschreibung</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>display: block</td>
+                    <td>Wandelt inline-Element in ein Block-Element um, Element erzeugt neue Zeile und nimmt unangepasst die gesamte ihm zur Verfügung stehende Breite ein, Breite und Höhe können definiert werden</td>
+                </tr>
+                <tr>
+                    <td>display: inline</td>
+                    <td>Wandelt ein Blockelement in ein Inline-Element um, Element wird im laufenden Textfluss angezeigt, Breite und Höhe können nicht definiert werden</td>
+                </tr>
+                <tr>
+                    <td>display: inline-block</td>
+                    <td>Erzeugt einen Block, für den Breite und Höhe angegeben werden können, lässt Elemen jedoch im laufenden Textfluss, ähnlich dem img-Element</td>
+                </tr>
+                <tr>
+                    <td>display: none</td>
+                    <td>Das Element wird nicht angezeigt und nimmt auch keinen Raum mehr ein (sehr nützlich für evtl. Responsive, wenn gewisse Elemente bei Mobile nicht angezeigt werden sollen)</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>Gruppieren und positionsbedingte Auswahl von Selektoren</h3>
+        <p>Um mehrere Elemente zu gruppieren, gibt es die Möglichkeit, diese mit Kommata getrennt "aufzuzählen".</p>
+
+        <span>Beispiel, table, th, td gruppiert in der Auswahl...:</span><br>
+        <img src="Bilder/17_gruppieren_von_elementen.jpg" alt="Beispiel für das gruppierte Auswählen von Elementen mit Komma">
+
+        <h4>Nachfahre Selektor (Descendant-Selektor)</h4>
+        <p>Wenn man mehrere Selektoren mit Leerzeichen trennt, kann man die Auswahl abhängig von den Vorfahr-Elementen</p>
+
+    
+        <span>Beispiel für Nachfahre - Auswahl</span><br>
+        <img src="Bilder/18_nachfahre-selektor.jpg" alt="Beispiel des Nachfahre-Selektors">
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Selektoren</th>
+                    <th>Beschreibung</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>div p</td>
+                    <td>ändert alle Absätze &lt;p&gt;, die sich innerhalb eines beliebigen div-Tags befinden, nicht aber Absätze außerhalb von div-Tags
+                    </td>
+                </tr>
+                <tr>
+                    <td>.box h1</td>
+                    <td>ändert Überschriften &lt;h1&gt;, die sich innerhalb von Elementen mit dem Klassennamen .box befinden</td>
+                </tr>
+                <tr>
+                    <td>div#navi ul</td>
+                    <td>ändert alle Listen &lt;ul&gt;, die sich innerhalb des div-Containers mit der ID #navi befinden</td>
+                </tr>
+                <tr>
+                    <td>div#menu ul.rot li</td>
+                    <td>ändert alle Listeneinträge &lt;li&gt; in ul-Listen mit dem Klassennamen .rot, sofern sich diese in einer div-Box mit der ID #menu befinden</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h4>Direkter Kind-Selektor (child-selektor)</h4>
+        <span>Es werden <b>alle DIREKTEN</b> Kindelemente gewählt</span><br>
+        <img src="Bilder/19_kind-selektor.jpg" alt="Beispiel Code für den Kind-Selektor">
+
+        <h4>Benachbarte Geschwister Selektor (Adjacent Sibling Selektor)</h4>
+        <span>Formatiert das passende Element, das <b>DIREKT</b> nach einem Element kommt</span><br>
+        <img src="Bilder/20_adjacent-sibling-selektor.jpg" alt="Beispiel Code für den Benachbarter-Geschwister-Selektor">
+
+        <h4>Generelle Geschwister Selektor</h4>
+        <span>Formatiert alle passenden Geschwister Elemente, die nach einem Element folgen</span><br>
+        <img src="Bilder/21_general-sibling-selector.jpg" alt="Beispiel Code für den Generelle-Geschwister-Selektor">
+
+        <h3>nth-child und nth-of-type Auswahl</h3>
+        <p>Für das Durchzählen von Elementen gibt es zwei Pseudo-Klassen und zwar nth-child und nth-of-type. Diese erwarten in der runden Klammer eine Angabe, welche Elemente ausgwählt werden.</p>
+        
+        <h4>nth-child(3) - direkte Auswahl</h4>
+        <img src="Bilder/22_nth-child-3.jpg" alt="Beispiel von nth-child(3)">
+        <img src="Bilder/23_ergebnis-nth-child-3.jpg" alt="Ergebnis von Beispiel nth-child(3)">
+
+        <h4>nth-child(odd) - ungerade Auswahl</h4>
+        <img src="Bilder/24_nth-child-odd.jpg" alt="Beispiel von nth-child(odd)">
+        <img src="Bilder/25_nth-child-odd-ergebnis.jpg" alt="Ergebnis von Beispiel nth-child(odd)">
+
+        <h4>nth-child(evene) - gerade Auswahl</h4>
+        <img src="Bilder/26_nth-child-even.jpg" alt="Beispiel von nth-child(even)">
+        <img src="Bilder/27_nth-child-even-ergebnis.jpg" alt="Ergebnis von Beispiel nth-child(even)">
+
+        <h4>nth-child(3n)</h4>
+        <span>Mit der Formel 3n wird jedes 3te Element gewählt. Auch ein Offset kann angebenen werden, z.B 2n +1. Hier wird der Start der Zählung um 1 verändert.</span><br>
+        <img src="Bilder/28_nth-child-3n.jpg" alt="Beispiel von nth-child(3n)">
+        <img src="Bilder/28_nth-child-3n-ergebnis.jpg" alt="Ergebnis von Beispiel nth-child(3n)">
+
+        <h4>nth-of-type(odd)</h4>
+        <span>nth-of-type funktioniert genau so wie nth-child, nur dass nicht jedes Nachfahr-Element "durchgezählt", sondern nur der angegebene Typ. Es können die gleichen Angaben wie in nth-child verwenden werden, z.B. odd, even, eine genaue Zahl oder Xn + Offset.</span><br>
+        <img src="Bilder/29_nth-of-type.jpg" alt="Beispiel von nth-of-type">
+        <img src="Bilder/30_nth-of-type-ergebnis.jpg" alt="Ergebnis von Beispiel nth-of-type">
+
+        <h4>first-child, last-child und only-child</h4>
+        <span>Mit den Pseudo-Klassen first-child, last-child und only-child können entweder das erste Element, das letzte oder das einzige Element ausgewählt werden. Hierbei wird die Bedingung geprüft, ob das erste tatsächlich vom entsprechenden Typ ist, siehe Beispiel. Last-Child funktioniert genau so wie first-child, nur eben das letzte Element. Bei only-child darf nur ein Element in der Liste der Bedingung entsprechen, dann wird es formatiert.</span><br>
+        <img src="Bilder/31_first-child.jpg" alt="Beispiel von first-child">
+        <img src="Bilder/32_first-child-ergebnis.jpg" alt="Ergebnis von Beispiel first-child">
+
+
+    </main>
+
+</body>
+</html>
